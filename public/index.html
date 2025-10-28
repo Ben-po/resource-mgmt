@@ -1,12 +1,70 @@
-<html>
+<!DOCTYPE html>
 
 <head>
-<title>DVOPS - Resource Management Web App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVOPS - Resource Management Web App</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="js/add-resource.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-Welcome to my Resource Management Web Application. In this application, users
-will get to manage resources.
-</body>
-
-</html
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <img src = "images/logo.png">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resourceModal">
+                    Add Resource
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="resourceModal" tabindex="-1" role="dialog" aria-labelledby="resourceModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resourceModalLabel">Add New Resource</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Resource Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter resource name">
+              </div>
+              <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" class="form-control" id="location" placeholder="Enter resource location">
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" placeholder="Enter short description">
+              </div>
+              <div class="form-group">
+                <label for="description">Owner</label>
+                <input type="text" class="form-control" id="owner" placeholder="Enter resource owner">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="addResource()">Add New Resource</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
+</html>
