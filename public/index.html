@@ -1,12 +1,58 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>DVOPS - Resource Management Web App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DVOPS - Resource Management Web App</title>
+
+  <!-- jQuery, Popper, Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Scripts and Styles -->
+  <script src="js/view-resources.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-Welcome to my Resource Management Web Application. In this application, users
-will get to manage resources.
-</body>
+<body onload="viewResources()">
+  <div class="container mt-5">
 
-</html
+    <div class="row justify-content-center">
+      <img src="images/logo.png" alt="DVOPS Logo">
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <!-- Optional content here -->
+      </div>
+      <div class="col-md-2">
+        <!-- Optional content here -->
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <table class="table table-striped table-striped-custom">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Description</th>
+              <th>Owner</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tableContent">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
