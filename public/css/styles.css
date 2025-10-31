@@ -1,0 +1,3 @@
+.table-striped-custom tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; /* Alternate row color */
+}
