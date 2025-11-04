@@ -13,6 +13,10 @@ const { viewResources } = require('./utils/ViewResourceUtil')
 app.get('/view-resources', viewResources)
 const { addResource } = require('./utils/AddResourceUtil');
 app.post('/add-resource', addResource);
+const { editResource } = require('./utils/EditResourceUtil');
+app.put('/edit-resource/:id', editResource);
+const { deleteResource } = require('./utils/DeleteResourceUtil');
+app.delete('/delete-resource/:id', deleteResource);
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
