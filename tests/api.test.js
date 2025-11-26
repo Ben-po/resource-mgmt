@@ -40,7 +40,7 @@ describe('Resource Management API', () => {
             owner: 'api@test.com'
         };
         // Send a PUT request to update the resource by ID
-        const res = await request(app).put(/edit-resource/${resourceId}).send(updated);
+        const res = await request(app).put(`/edit-resource/${resourceId}`).send(updated);
         // Check that the response returned a 200 (OK) status
         expect(res.status).toBe(200);
         // Verify that the resource's name was updated successfully
@@ -49,7 +49,7 @@ describe('Resource Management API', () => {
     // Test case to verify that a resource can be deleted successfully
     it('DELETE /delete-resource/:id should remove resource', async () => {
         // Send a DELETE request to remove the resource by ID
-        const res = await request(app).delete(/delete-resource/${resourceId});
+        const res = await request(app).delete(`/delete-resource/${resourceId}`);
         // Confirm the API returned a 200 (OK) status
         expect(res.status).toBe(200);
         // Send another GET request to confirm the resource has been removed
