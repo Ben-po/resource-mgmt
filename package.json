@@ -4,8 +4,7 @@
   "description": "This is a reference project for the DVOPS subject",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose",
-    "test-frontend": "npx playwright test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +13,5 @@
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
     "fs": "^0.0.1-security"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.57.0",
-    "@types/node": "^24.10.1"
   }
 }
