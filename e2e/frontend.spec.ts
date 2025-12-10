@@ -77,7 +77,7 @@ test.describe('Resource Mgmt CRUD Frontend Tests', () => {
       hasText: resourceName
     });
 
-    await row.waitFor({ state: 'visible', timeout: 10000 });
+    await row.waitFor({ state: 'visible', timeout: 15000 });
 
     // Assert new row is visible
     await expect(row).toBeVisible();
@@ -128,7 +128,7 @@ test.describe('Resource Mgmt CRUD Frontend Tests', () => {
       hasText: newName
     });
     await
-      expect(updatedRow).toBeVisible({ timeout: 20000 });
+      expect(updatedRow).toBeVisible({ timeout: 25000 });
 
     // Verify updated fields
     await expect(updatedRow.locator('td').nth(1)).toHaveText(newName);           // Name

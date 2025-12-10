@@ -4,7 +4,11 @@
   "description": "This is a reference project for the DVOPS subject.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose",
+    "test:coverage": "jest --verbose --coverage",
+    "test-frontend": "npx playwright test",
+    "test-frontend:coverage": "npx playwright test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
