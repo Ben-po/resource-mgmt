@@ -1,9 +1,14 @@
 const request = require('supertest');
 const { app, server } = require('../index');
+
 // Close server after all tests complete
-afterAll(() => server.close());
+// afterAll(async () => {
+//     await new Promise((resolve) => server.close(resolve) // wait for 500ms to ensure all connections are closed
+// )});
+
 describe('Resource Management API', () => {
     let resourceId;
+
     it('POST /add-resource should create a resource', async () => {
         // Define the resource object to be sent to the API
         const newResource = {
@@ -12,7 +17,7 @@ describe('Resource Management API', () => {
             description: 'Desc',
             owner: 'api@test.com'
         };
-        // Send a POST request to /add-resource with the new resource data
+        //         // Send a POST request to /add-resource with the new resource data
         const res = await request(app).post('/add-resource').send(newResource);
         // Verify that the API returned the correct status code
         expect(res.status).toBe(201);

@@ -4,23 +4,22 @@
   "description": "This is a reference project for the DVOPS subject.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose",
+    "test": "jest --verbose --coverage",
     "test:coverage": "jest --verbose --coverage",
     "test-frontend": "npx playwright test",
-    "test-frontend:coverage": "npx playwright test",
-    "start": "node index.js"
+    "test-frontend:coverage": "node generate-coverage.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ben-po/resource-mgmt.git"
+    "url": "git+https://github.com/glennalee/resource-mgmt.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ben-po/resource-mgmt/issues"
+    "url": "https://github.com/glennalee/resource-mgmt/issues"
   },
-  "homepage": "https://github.com/Ben-po/resource-mgmt#readme",
+  "homepage": "https://github.com/glennalee/resource-mgmt#readme",
   "dependencies": {
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
