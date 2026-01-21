@@ -35,7 +35,11 @@ if (process.env.JEST_WORKER_ID === undefined) {
   });
 } else {
   afterAll((done) => {
-    server.close(done);
+    if (server) {
+      server.close(done);
+    } else {
+      done();
+    }
   });
 }
 
