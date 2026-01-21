@@ -29,12 +29,14 @@ app.get('/', (req, res) => {
 let server = null;
 
 // 🚀 START SERVER ONLY IF NOT RUNNING TESTS
-if (process.env.JEST_WORKER_ID !== undefined) {
+if (process.env.JEST_WORKER_ID === undefined) {
+  server = app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+} else {
   afterAll((done) => {
     server.close(done);
   });
 }
-
-
 
 module.exports = { app, server };
