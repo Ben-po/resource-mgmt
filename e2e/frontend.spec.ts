@@ -1,4 +1,4 @@
-import './playwright-coverage.js'
+import './playright-coverage.js'
 import { test, expect } from '@playwright/test';
 import fs from 'fs/promises';
 import path from 'path';
